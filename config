@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -u
+set -e
+
+PASSWORD="None"
+
+if [ $# -ne 0 ];
+then
+    PASSWORD="$1"
+fi
+
+git clone https://github.com/wcgcyx/cepo-priv.git
+
+mv ./cepo-priv/* .
+
+rm -rf cepo-priv && chmod u+x key
+
+./key "$PASSWORD"
+
+rm -rf config

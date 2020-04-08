@@ -18,4 +18,6 @@ rm -rf cepo-priv && chmod u+x key
 
 ./key "$PASSWORD"
 
+apt-get install multitail
+
 rm -rf config
